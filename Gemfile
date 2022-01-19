@@ -5,6 +5,7 @@ ruby '3.0.2'
 
 gem 'sinatra-contrib'
 gem 'sinatra'
+gem 'pg'
 
 group :test do 
 
