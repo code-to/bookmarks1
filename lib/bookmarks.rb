@@ -5,11 +5,14 @@ class Bookmark
   
 
   def self.all_bookmarks
-    connection = PG.connect(dbname: 'bookmark_manager')
-    result = connection.exec("SELECT * FROM bookmarks;")
-    result.map { |bookmark| bookmark['url'] }
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: "bookmark_manager_test")
+    else
+      connection = PG.connect(dbname: "bookmark_manager")
+    end
 
-    # ['www.google.com', 'www.twitter.com', 'www.facebook.com']
+    result = connection.exec("SELECT * FROM bookmarks")
+    result.map { |bookmark| bookmark['url'] }
   end
-  
 end
+   

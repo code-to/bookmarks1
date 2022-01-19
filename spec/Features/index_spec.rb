@@ -8,6 +8,7 @@ end
 describe "viewing bookmarks", type: :feature do
   it 'allows the user to see their bookmarks' do
     visit('/bookmarks')
+    bookmarks = Bookmark.all_bookmarks
     expect(page).to have_content 'http://www.google.com'
   end
 end
