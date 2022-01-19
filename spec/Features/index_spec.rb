@@ -7,8 +7,12 @@ end
 
 describe "viewing bookmarks", type: :feature do
   it 'allows the user to see their bookmarks' do
+    connection = PG.connect(dbname: 'bookmark_manager_test')
+
+    connection.exec ("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
+
     visit('/bookmarks')
-    bookmarks = Bookmark.all_bookmarks
+    # bookmarks = Bookmark.all_bookmarks
     expect(page).to have_content 'http://www.google.com'
   end
 end

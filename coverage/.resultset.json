@@ -13,10 +13,19 @@
           null,
           null,
           1,
+          2,
+          2,
+          2,
+          null,
+          null,
           1,
           1,
           null,
           null,
+          1,
+          1,
+          1,
+          1,
           1,
           null,
           null,
@@ -42,8 +51,20 @@
           null,
           null,
           3,
-          10,
+          6,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/theresaokyere/Projects/bookmarks1/spec/Features/creating_bookmarks_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -60,7 +81,11 @@
           1,
           1,
           1,
+          null,
           1,
+          null,
+          1,
+          null,
           1,
           null,
           null
@@ -77,6 +102,7 @@
           1,
           null,
           1,
+          null,
           1,
           null,
           null,
@@ -84,6 +110,6 @@
         ]
       }
     },
-    "timestamp": 1642605102
+    "timestamp": 1642608964
   }
 }

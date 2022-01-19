@@ -7,7 +7,7 @@ describe Bookmark do
       connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
 
       bookmarks = Bookmark.all_bookmarks
-      visit('/bookmarks')
+      # visit('/bookmarks')
       expect(bookmarks).to include("http://www.google.com")
     end
   end
