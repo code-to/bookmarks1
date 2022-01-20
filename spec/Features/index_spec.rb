@@ -10,6 +10,7 @@ describe "viewing bookmarks", type: :feature do
     connection = PG.connect(dbname: 'bookmark_manager_test')
 
     connection.exec ("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
+    bookmark = Bookmark.all_bookmarks
     # Bookmark.create(url: "http://www.google.com")
 
     visit('/bookmarks')
