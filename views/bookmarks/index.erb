@@ -1,8 +1,11 @@
-# <%= @bookmarks.join (' , ') %> 
-<ul>
-<% @bookmarks.each do |bookmark| %> 
-  <a href=bookmark</a>
-<li> <%= bookmark %></li> 
-<% end %>
-</ul>
+ 
 
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+    <li>
+      <a href="<%= bookmark.url %>">
+        <%= bookmark.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
